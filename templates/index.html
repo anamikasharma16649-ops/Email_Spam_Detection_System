@@ -1,27 +1,3 @@
-<!-- <!-- <!DOCTYPE html>
-<html>
-<head>
-    <title>Email Spam Detection</title>
-      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-
-    <h1>Email Spam Detection System</h1>
-
-    <form action="/predict" method="POST">
-        <textarea name="message" rows="10" cols="50" placeholder="Enter your email here"></textarea>
-        <br><br>
-
-        <button type="submit">Predict</button>
-    </form>
-    <h2>{{ prediction }}</h2>
-
-
-</body>
-</html> -->
-
-<!-- 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,30 +29,4 @@
 </div>
 
 </body>
-</html> --> -->
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Email Spam Detection</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-
-    <h1>📧 Email Spam Detection System</h1>
-
-    <form action="/predict" method="POST">
-        <textarea name="message" rows="10" cols="50" placeholder="Enter your email here..."></textarea>
-        <br><br>
-
-        <button type="submit">🔍 Predict</button>
-    </form>
-    
-    {% if prediction %}
-        <h2 class="result {{ 'spam' if prediction == 'Spam' else 'not-spam' }}">
-            {{ prediction }}
-        </h2>
-    {% endif %}
-
-</body>
-</html>
+</html> 
