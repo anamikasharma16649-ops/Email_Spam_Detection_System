@@ -1,0 +1,82 @@
+<!-- <!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Email Spam Detection</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>Email Spam Detection System</h1>
+
+    <form action="/predict" method="POST">
+        <textarea name="message" rows="10" cols="50" placeholder="Enter your email here"></textarea>
+        <br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+    <h2>{{ prediction }}</h2>
+
+
+</body>
+</html> -->
+
+<!-- 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Spam Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>📧 Email Spam Detection</h1>
+    
+    <form action="/predict" method="POST">
+        <textarea 
+            name="message" 
+            rows="8" 
+            placeholder="Enter your email here...&#10;&#10;Example:&#10;Congratulations! You won $1000 prize. Click here to claim."
+            required
+        ></textarea>
+        <br>
+        <button type="submit">Check Spam</button>
+    </form>
+    
+    {% if prediction %}
+    <div class="result {% if prediction == 'Spam' %}spam{% elif prediction == 'Not Spam' %}not-spam{% else %}error{% endif %}">
+        <strong>Result: {{ prediction }}</strong>
+    </div>
+    {% endif %}
+    
+</div>
+
+</body>
+</html> --> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Spam Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>📧 Email Spam Detection System</h1>
+
+    <form action="/predict" method="POST">
+        <textarea name="message" rows="10" cols="50" placeholder="Enter your email here..."></textarea>
+        <br><br>
+
+        <button type="submit">🔍 Predict</button>
+    </form>
+    
+    {% if prediction %}
+        <h2 class="result {{ 'spam' if prediction == 'Spam' else 'not-spam' }}">
+            {{ prediction }}
+        </h2>
+    {% endif %}
+
+</body>
+</html>
