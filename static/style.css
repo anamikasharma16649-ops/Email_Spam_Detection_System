@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     background-color: #f0f2f5;
     margin: 0;
@@ -76,4 +76,122 @@ button:hover {
     color: #666;
     font-size: 12px;
 } 
+ */
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 750px;
+    margin: 50px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 35px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e1e5e9;
+    border-radius: 12px;
+    font-size: 14px;
+    font-family: 'Segoe UI', monospace;
+    resize: vertical;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 15px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.result {
+    margin-top: 25px;
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    animation: slideIn 0.4s ease;
+}
+
+.spam {
+    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+    color: #c62828;
+    border-left: 5px solid #c62828;
+    border-right: 5px solid #c62828;
+    box-shadow: 0 4px 15px rgba(198, 40, 40, 0.2);
+}
+
+.not-spam {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    color: #2e7d32;
+    border-left: 5px solid #2e7d32;
+    border-right: 5px solid #2e7d32;
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.2);
+}
+
+.error {
+    background-color: #fff3e0;
+    color: #e65100;
+    border-left: 5px solid #e65100;
+    border-right: 5px solid #e65100;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
